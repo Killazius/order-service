@@ -10,6 +10,10 @@ clear:
 	del ${BINARY_NAME}
 run:
 	make build && make exec && make clear
+
+docker:
+	docker compose down && docker image prune -f && docker compose up -d --build
+
 proto:
 	protoc --go_out=./pkg/api/test --go_opt=paths=source_relative \
         --go-grpc_out=./pkg/api/test --go-grpc_opt=paths=source_relative \
