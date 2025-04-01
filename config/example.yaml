@@ -1,0 +1,2 @@
+GRPC_PORT: 52 # Port for gRPC-Server
+HTTP_PORT: 80 # Port for HTTP-Server
